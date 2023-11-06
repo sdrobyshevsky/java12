@@ -9,6 +9,14 @@ private String[] names;
 private double[] frequencies;
 private PriorityQueue toys;
 
+public PriorityQueue getToys() {
+    return toys;
+}
+
+public void setToys(PriorityQueue toys) {
+    this.toys = toys;
+}
+
 public ToyCollection(String idString, String nameString, String frequencyString) {
 String[] idArr = idString.split(",");
 String[] nameArr = nameString.split(",");
@@ -35,6 +43,9 @@ toys.add(toy);
 }
 }
 
+public ToyCollection(String idString, String nameString, String frequencyString, Object toys2) {
+}
+
 public void writeResultsToFile(String filename) {
 try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
 for (int i = 0; i < 10; i++) {
@@ -47,3 +58,5 @@ e.printStackTrace();
 }
 }
 }
+
+
